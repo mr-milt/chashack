@@ -18,11 +18,11 @@ export default function About() {
         </div>
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
-          <p>Alex</p>
+          <p>Alex: Jag pluggar till Frontendutvecklare med ai-kompetens</p>
         </div>
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
-          <p>Gillian</p>
+          <p>Gillian: Jag pluggar .Net</p>
         </div>
       </div>
     </div>
