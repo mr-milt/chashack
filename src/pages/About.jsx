@@ -14,7 +14,7 @@ export default function About() {
         </div>
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
-          <p>Abiha</p>
+          <p>Abiha heter jag, är 28 och gillar smink och att virka. Nu vill jag koda igen och pluggar Fullstackutvecklare JavaScript.</p>
         </div>
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
