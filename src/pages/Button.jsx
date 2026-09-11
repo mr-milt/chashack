@@ -1,50 +1,69 @@
 import { useState } from "react";
 
-function randomChoice(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
+const colors = ["#9146FF", "#E91E63", "#FF9800", "#4CAF50", "#2196F3"];
 
-const quotes = ["meow", "look what the cat dragged in", "fuking git", "vem har pushat det här"];
+function buttonStyle(bg) {
+  return {
+    backgroundColor: bg,
+    color: "white",
+    padding: "12px 24px",
+    borderRadius: "8px",
+    border: "none",
+    fontWeight: "bold",
+    cursor: "pointer",
+    minWidth: "140px",
+    minHeight: "55px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    transition: "background-color 0.2s",
+  };
+}
 
 export default function Button() {
   const [text, setText] = useState("Klicka här!");
   const [count, setCount] = useState(0);
   const [hover, setHover] = useState(false);
-  const [quote, setQuote] = useState(() => randomChoice(quotes));
+
+  const toggled = text !== "Klicka här!";
+
+  const bytText = () => {
+    setText(toggled ? "Klicka här!" : "Hej på dig! 👋");
+  };
 
   return (
-    <>
-      <div className="flex gap-2 justify-around">
-        <div className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
-          <button onClick={() => setText("Hej på dig! 👋")}>{text}</button>
+    <div className="flex gap-4 justify-around flex-wrap my-5">
+      <button
+        type="button"
+        onClick={bytText}
+        style={buttonStyle(toggled ? "#4CAF50" : "#9146FF")}
+      >
+        {text}
+      </button>
+
+      <button
+        type="button"
+        onClick={() => setCount((c) => c + 1)}
+        style={buttonStyle(colors[count % colors.length])}
+      >
+        Number: {count}
+      </button>
+
+      <button
+        type="button"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={buttonStyle(hover ? "#E91E63" : "#9146FF")}
+      >
+        {hover ? "DU hovrar 👀" : "Hover here"}
+      </button>
+
+      {hover && (
+        <div className="w-full text-center mt-2">
+          Kolla vad som gömde sig här - mjau! 🐱
         </div>
-
-        <div
-          onClick={() => setCount((c) => c + 1)}
-          className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
-        >
-          <button>Number: {count}</button>
-        </div>
-
-        <div
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          className="flex relative button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
-        >
-          {hover ? "DU hovrar" : "Hover here"}
-        </div>
-
-        {hover && <div className="absolute z-3 top-70">Kolla vad gömde sig här, hover visar mig</div>}
-      </div>
-
-      <div className="flex gap-2 justify-around">
-        <button
-          onClick={() => setQuote(randomChoice(quotes))}
-          className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
-        >
-          {quote}
-        </button>
-      </div>
-    </>
+      )}
+    </div>
   );
 }
