@@ -1,32 +1,50 @@
-import React, { use, useState } from "react";
+import { useState } from "react";
+
+function randomChoice(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+const quotes = ["meow", "look what the cat dragged in", "fuking git", "vem har pushat det här"];
 
 export default function Button() {
   const [text, setText] = useState("Klicka här!");
-  const [count, setCount] = useState(0)
-   const [hover, SetHover] = useState(false)
-
-  const bytatext = () => {
-    setText("Hej på dig! 👋");
-  };
+  const [count, setCount] = useState(0);
+  const [hover, setHover] = useState(false);
+  const [quote, setQuote] = useState(() => randomChoice(quotes));
 
   return (
-    <div className="flex gap-2 justify-around">
+    <>
+      <div className="flex gap-2 justify-around">
+        <div className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
+          <button onClick={() => setText("Hej på dig! 👋")}>{text}</button>
+        </div>
 
-      <div className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
-        <button onClick={() => bytatext()}>{text}</button>
+        <div
+          onClick={() => setCount((c) => c + 1)}
+          className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
+        >
+          <button>Number: {count}</button>
+        </div>
+
+        <div
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          className="flex relative button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
+        >
+          {hover ? "DU hovrar" : "Hover here"}
+        </div>
+
+        {hover && <div className="absolute z-3 top-70">Kolla vad gömde sig här, hover visar mig</div>}
       </div>
 
-      <div onClick={() => setCount(count + 1)} className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
-        <button >Number: {count}</button>
+      <div className="flex gap-2 justify-around">
+        <button
+          onClick={() => setQuote(randomChoice(quotes))}
+          className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer"
+        >
+          {quote}
+        </button>
       </div>
-
-      <div className="flex relative button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
-        <div onMouseEnter={() => SetHover(true)} onMouseLeave={() => SetHover(false)}>{ hover ? <div className="absulute" > DU hovrar</div> : "Hover here"}</div>
-
-      </div>
-
-        { hover ? <div className="absolute z-3 top-80">Kolla vad göde sig här, hover vissar mig</div> : ""}
-
-    </div>
+    </>
   );
 }
