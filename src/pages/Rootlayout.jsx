@@ -1,14 +1,19 @@
-import React from 'react'
-import { Outlet } from 'react-router'
+import React from "react";
+import { Outlet } from "react-router";
 
-import NavBar from './NavBar'
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default function Rootlayout() {
   return (
     <>
-    <NavBar />
+      <NavBar />
 
-    < Outlet />
+      <div className=" flex-1">
+        <Outlet />
+      </div>
+
+      <Footer />
     </>
-  )
+  );
 }

@@ -8,6 +8,10 @@ export default function About() {
         Codecats
       </div>
 
+      <div className="text-3xl text-center font-bold my-3">
+        Text om oss här
+      </div>
+
       <div className="flex flex-col items-center gap-10">
 
         <div className="text-3xl text-center font-bold w-100 max-h-50">
@@ -30,7 +34,7 @@ export default function About() {
 
         <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
-          <p>Gillian: Jag älskar musik och pluggar .Net</p>
+          <p>Gillian: Jag är Musiker och Ljudtekniker och pluggar Fullstack .Net</p>
         </div>
       </div>
 
