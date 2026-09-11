@@ -1,6 +1,6 @@
 import react from 'react'
 
 export default function About() { 
-    return (<div>About</div>)
+    return (<div className=' text-red-500'>About</div>)
 }
 
