@@ -2,10 +2,17 @@ import React from "react";
 
 
 export default function Home() {
+      const [text, setText] = useState("Klicka här!");
+
+  const bytatext = () => {
+    setText("Hej på dig! 👋");
+  };
+  
   return (
     <div>
       <div className="button">
-        <button onClick={bytatext} style={{
+        <button onClick={bytatext} 
+    style={{
     padding: "12px 24px",
     fontSize: "16px",
     border: "2px solid #333",
