@@ -22,7 +22,7 @@ export default function About() {
         <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
           <p>
-            Abiha heter jag och pluggar Fullstackutvecklare JavaScript.
+            Abiha: pluggar Fullstackutvecklare JavaScript.
           </p>
         </div>
 
