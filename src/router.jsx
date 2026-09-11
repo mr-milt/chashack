@@ -4,6 +4,7 @@ import Rootlayout from "./pages/Rootlayout";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Button from "./pages/Button";
 
 const Router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
        { path: "AboutUs", element: <About /> },
+       { path: "buttons", element: <Button /> },
       { path: "*", element: <NotFound /> },
     ],
   },

@@ -8,7 +8,7 @@ export default function NavBar() {
     <div className="flex shadow-md justify-end items-center text-center text-3xl">
       <div className="flex flex-1 gap-5 items-center text-center mx-3">
         <div>
-          <Link to={'/'}>
+          <Link to={"/"}>
             <img
               className="w-20 items-center text-center hover:cursor-pointer"
               src={codecats}
@@ -19,9 +19,14 @@ export default function NavBar() {
         <div>
           <div className="items-center text-center text-blue">
             <Link to={"/aboutus"} className="">
-              About us
+              About
             </Link>
           </div>
+        </div>
+        <div className="items-center text-center text-blue">
+          <Link to={"/buttons"} className="">
+            Buttons
+          </Link>
         </div>
       </div>
 

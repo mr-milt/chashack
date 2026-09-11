@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Home() {
+export default function Button() {
   const [text, setText] = useState("Klicka här!");
 
   const bytatext = () => {
@@ -8,21 +8,9 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <div className="button">
-        <button
-          onClick={bytatext}
-          style={{
-            padding: "12px 24px",
-            fontSize: "16px",
-            border: "2px solid #333",
-            borderRadius: "25px",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-            cursor: "pointer",
-          }}
-        >
-          {text}
-        </button>
+    <div className="flex justify-center">
+      <div className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md">
+        <button onClick={() => bytatext()}>{text}</button>
       </div>
     </div>
   );

@@ -1,0 +1,52 @@
+# docker-compose for geodeal.
+#
+# Currently defines three services:
+#   client - the React (Vite) frontend      -> dockerfile.react
+#   db     - PostgreSQL database             -> official postgres image
+#   proxy  - nginx reverse proxy + TLS termination
+#
+# The backend server services (node / python) are intentionally left out for
+# now (see docker/README).
+#
+# Run from the docker/ directory:
+#   docker compose up --build
+
+services:
+  client:
+    build:
+      context: ..
+      dockerfile: docker/dockerfile.react
+    container_name: codecats-react
+    ports:
+      - "5173:5173"
+    volumes:
+      # Bind-mount the source for hot reload, but keep the container's own
+      # node_modules (installed during the image build).
+      - /app/node_modules
+    environment:
+      # Use polling so file-change events propagate reliably across the
+      # bind mount on all host platforms.
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+
+
+  proxy:
+    image: nginx:alpine
+    container_name: codecats-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./nginx.conf.docker:/etc/nginx/conf.d/default.conf:ro
+      - /var/www/certbot:/var/www/certbot
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - client
+      # - node
+      # - python
+    restart: unless-stopped
+
+
+

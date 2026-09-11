@@ -9,9 +9,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="button">
-        <button onClick={hanteraKlick}>{text}</button>
-      </div>
+
     </div>
   );
 }
