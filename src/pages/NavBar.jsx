@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="flex gap-3 shadow-md justify-end items-center text-center text-3xl">
-      <div className="flex flex-1 items-center text-center mx-3">
+    <div className="flex shadow-md justify-end items-center text-center text-3xl">
+      <div className="flex flex-1 gap-5 items-center text-center mx-3">
         <div>
           <Link to={'/'}>
             <img
-              className="w-20 items-center text-center"
+              className="w-20 items-center text-center hover:cursor-pointer"
               src={codecats}
               alt="Code Cats logo"
             />
@@ -25,7 +25,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div className="flex flex-1 items-center text-center mx-3">
+      <div className="flex flex-1 gap-5 items-center text-center mx-3">
         <div></div>
       </div>
     </div>
