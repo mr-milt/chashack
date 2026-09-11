@@ -1,4 +1,6 @@
 import React from "react";
+import gang from "../assets/gang.jpeg";
+import codecats from "../assets/codecats.png";
 
 export default function About() {
   return (
@@ -40,6 +42,17 @@ export default function About() {
             Jag är musiker och ljudtekniker och pluggar Fullstack .NET.
           </p>
         </article>
+
+        <img
+          src={gang}
+          alt="CodeCats group photo"
+          className="w-full max-w-2xl mx-auto mt-12"
+        />
+        <img
+          src={codecats}
+          alt="CodeCats logotyp"
+          className="w-full max-w-3xl mx-auto mt-12"
+        />
       </section>
     </main>
   );
