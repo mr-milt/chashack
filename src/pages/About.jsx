@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main className="my-4">
       <section className="text-center my-6">
-        <h1 className="text-6xl font-bold">Codecats</h1>
+        <h1 className="text-6xl font-bold">CodeCats</h1>
 
         <p className="text-2xl font-bold my-3 italic">
           Vi är ett gäng coola katter som gillar att koda
