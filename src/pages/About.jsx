@@ -30,7 +30,7 @@ export default function About() {
 
         <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
-          <p>Gillian: Jag älskar musik och pluggar .Net</p>
+          <p>Gillian: Jag är ljudtekniker och pluggar Fullstack .Net</p>
         </div>
       </div>
 
