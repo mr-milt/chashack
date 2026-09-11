@@ -2,20 +2,20 @@ import react from "react";
 
 export default function About() {
   return (
-    <div>
-        
-      <div className="text-3xl text-center font-bold">
+    <div className="my-4">
+
+      <div className="text-5xl text-center font-bold my-3">
         Codecats
       </div>
 
-      <div className="flex flex-col items-center gap-3 my-3">
+      <div className="flex flex-col items-center gap-10">
 
-        <div className="text-3xl text-center font-bold w-100 min-h-50">
+        <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
           <p>Milton: jag pluggar devops och har kodat i ungefär 3 år</p>
         </div>
 
-        <div className="text-3xl text-center font-bold w-100 min-h-50">
+        <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
           <p>
             Abiha heter jag, är 28 och gillar smink och att virka. Nu vill jag
@@ -23,12 +23,12 @@ export default function About() {
           </p>
         </div>
 
-        <div className="text-3xl text-center font-bold w-100 min-h-50">
+        <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
           <p>Alex: Jag pluggar till Frontendutvecklare med ai-kompetens</p>
         </div>
 
-        <div className="text-3xl text-center font-bold w-100 min-h-50">
+        <div className="text-3xl text-center font-bold w-100 max-h-50">
           <img src="" alt="" />
           <p>Gillian: Jag pluggar .Net</p>
         </div>
