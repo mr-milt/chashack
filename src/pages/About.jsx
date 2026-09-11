@@ -23,7 +23,7 @@ export default function About() {
         </div>
         <div className="flex text-3xl text-center items-center font-bold w-100">
           <img src="" alt="" />
-          <p>Gillian: Jag pluggar .Net</p>
+          <p>Gillian: Jag älskar musik och pluggar .Net</p>
         </div>
       </div>
     </div>
