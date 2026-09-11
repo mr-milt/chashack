@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
-    <div className='shadow-md min-h-50'>
-
-    </div>
-  )
+    <footer className="border-t mt-10 py-4 text-sm text-center">
+      <p>© CodeCats 2026</p>
+    </footer>
+  );
 }
