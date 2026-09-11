@@ -10,7 +10,7 @@ export default function About() {
       <div className="flex gap-3 flex-row justify-center">
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
-          <p>Milton</p>
+          <p>Milton: jag pluggar devops och har kodat i ungefär 3 år</p>
         </div>
         <div className="flex text-3xl text-center items-center font-bold">
           <img src="" alt="" />
