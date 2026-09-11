@@ -9,7 +9,7 @@ export default function Rootlayout() {
     <>
       <NavBar />
 
-      <div className=" flex-1 h-screen ">
+      <div className=" flex-1">
         <Outlet />
       </div>
 
