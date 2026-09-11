@@ -1,4 +1,5 @@
 # nginx config for codecats - proxies to the Vite dev server (client container)
+#comment
 
 # Port 80: Let's Encrypt challenge + redirect everything else to HTTPS
 server {
