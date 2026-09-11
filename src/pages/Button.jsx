@@ -16,8 +16,8 @@ export default function Button() {
         <button onClick={() => bytatext()}>{text}</button>
       </div>
 
-      <div className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
-        <button onClick={() => setCount(count + 1)}>Number: {count}</button>
+      <div onClick={() => setCount(count + 1)} className="flex button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
+        <button >Number: {count}</button>
       </div>
 
       <div className="flex relative button bg-red-500 w-30 p-5 my-5 h-15 text-center items-center rounded-md hover:cursor-pointer">
