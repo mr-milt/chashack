@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 
 function randomChoice(arr) {
@@ -5,6 +6,9 @@ function randomChoice(arr) {
 }
 
 const quotes = ["meow", "look what the cat dragged in", "fuking git", "vem har pushat det här"];
+=======
+import React, { useState } from "react";
+>>>>>>> 155199a9230f2b7cb42a52c67fb385e6c1485d49
 
 export default function Button() {
   const [text, setText] = useState("Klicka här!");
