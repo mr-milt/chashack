@@ -19,6 +19,9 @@ npm run dev
 Sidan är live på: https://codecats.kodkaos.xyz
 ```
 
+## linkedin link 
+https://lnkd.in/p/dWc89JSc 
+
 That starts a dev server, usually on http://localhost:5173.
 
 `npm run build` puts the finished files in `dist/`, `npm run preview` serves those so you can check them before pushing, and `npm run lint` runs Oxlint over the code.
