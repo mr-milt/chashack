@@ -25,7 +25,7 @@ export default function Button() {
 
       </div>
 
-        { hover ? <div>Kolla vad göde sig här, hover vissar mig</div> : ""}
+        { hover ? <div className="absolute z-3 top-80">Kolla vad göde sig här, hover vissar mig</div> : ""}
 
     </div>
   );
