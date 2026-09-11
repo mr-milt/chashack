@@ -15,6 +15,8 @@ git clone https://github.com/mr-milt/chashack.git
 cd chashack
 npm install
 npm run dev
+
+Sidan är live på: https://codecats.kodkaos.xyz
 ```
 
 That starts a dev server, usually on http://localhost:5173.
